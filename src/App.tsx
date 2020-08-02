@@ -6,7 +6,8 @@ import {
   Input, 
   Text, 
   Image, 
-  Textarea 
+  Textarea,
+  Form
 } from '@tarojs/components';
 import ComponentsContainer from './components/utils/components-container';
 
@@ -24,6 +25,9 @@ function App() {
         <Button type="warn" size="mini">hello world</Button>
         <Button loading>hello world</Button>
         <Button disabled>hello world</Button>
+        <Form onSubmit={(e: any) => console.log('form submitted')}>
+          <Button formType="submit">submit form</Button>
+        </Form>
       </ComponentsContainer>
 
       <ComponentsContainer componentsName="Input">
